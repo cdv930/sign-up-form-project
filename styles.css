@@ -1,0 +1,223 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+:root {
+    --shadow-color: 0deg 3% 62%;
+    --shadow-elevation-low:
+        0px 1px 1px hsl(var(--shadow-color) / 0.45),
+        0px 1.5px 1.5px -1.7px hsl(var(--shadow-color) / 0.37),
+        -0.1px 3.8px 3.7px -3.5px hsl(var(--shadow-color) / 0.28);
+    --shadow-elevation-medium:
+        0px 1px 1px hsl(var(--shadow-color) / 0.38),
+        0px 2px 2px -0.9px hsl(var(--shadow-color) / 0.34),
+        -0.1px 4.3px 4.2px -1.7px hsl(var(--shadow-color) / 0.29),
+        -0.1px 9.4px 9.2px -2.6px hsl(var(--shadow-color) / 0.25),
+        -0.3px 19.1px 18.6px -3.5px hsl(var(--shadow-color) / 0.21);
+    --shadow-elevation-high:
+        0px 1px 1px hsl(var(--shadow-color) / 0.35),
+        0px 3.1px 3px -0.4px hsl(var(--shadow-color) / 0.33),
+        -0.1px 5.6px 5.5px -0.8px hsl(var(--shadow-color) / 0.31),
+        -0.1px 9px 8.8px -1.2px hsl(var(--shadow-color) / 0.29),
+        -0.2px 14.1px 13.7px -1.6px hsl(var(--shadow-color) / 0.27),
+        -0.3px 21.8px 21.3px -1.9px hsl(var(--shadow-color) / 0.25),
+        -0.5px 32.7px 31.9px -2.3px hsl(var(--shadow-color) / 0.23),
+        -0.7px 47.6px 46.4px -2.7px hsl(var(--shadow-color) / 0.21),
+        -1px 67.4px 65.7px -3.1px hsl(var(--shadow-color) / 0.19),
+        -1.3px 92.6px 90.3px -3.5px hsl(var(--shadow-color) / 0.17);
+}
+@font-face{
+    font-family:"Norse-Bold";
+    src: url(Norse-Bold.otf);
+}
+*{
+    font-family:Arial, Helvetica, sans-serif, 'Times New Roman', Times, serif;
+}
+#main-container{
+width: 1440px;
+display:flex;
+height: auto;
+}
+
+#image-sidebar{
+    display:flex;
+    width:35%;
+    
+}
+
+#main-content-container{
+    display:flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+#sidebar-container{
+    display:flex;
+    position:relative;
+    width:100%;
+}
+
+#hotwheel{
+    position:relative;
+    z-index: -1;
+}
+
+#overlay-container{
+    display:flex;
+    position:absolute;
+    width:100%;
+    background:#303030;
+    opacity:0.6;
+    color:white;
+    top:8rem;
+    justify-content: center;
+    height:100px;
+}
+
+#odin-logo{
+    height: inherit;
+    width:auto;
+    padding: 10px 0px 10px 0px;
+}
+
+#overlay-text{
+    font-family: "Norse-Bold";
+    font-size: 50px;
+    font-weight: bolder;
+    align-self: center;
+    padding-top: 10px;
+}
+
+.large-container{
+    background-color: #f4f2f2;
+    padding-left: 35px;
+}
+
+.medium-container{
+    background-color: #ffffff;
+    padding-left: 35px;
+    padding-top: 15px;
+}
+
+
+#heading{
+    display:flex;
+    font-weight: bold;
+    font-size: larger;
+    flex-grow: 1;   
+}
+
+#heading-text{
+    align-self: center;
+}
+
+#login{
+    display:flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-top: 40px;
+    padding-left: 40px;
+    gap:30px;
+}
+
+#form-container{
+    border: 2px solid red;
+    flex-grow: 1;
+    box-shadow: var(--shadow-elevation-medium);
+    z-index: 1;
+}
+
+#signupform{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-bottom: 50px;;
+}
+
+label{
+    font-size: smaller;
+}
+input {
+    appearance:none;
+    border:1px solid #bdbdbd;
+}
+#row1,#row2,#row3{
+    padding-top: 20px;
+    display:flex;
+    gap: 50px;
+}
+.form-input{
+    display:flex;
+    flex-direction: column;;
+}
+#form-left-col{
+    display:flex;
+    border:2px solid pink;
+    flex-direction:column;
+}
+ 
+#form-right-col{
+    border:2px solid pink;
+    display: flex;
+    flex-direction: column;
+}
+#create{
+    width:150px;
+    border-radius: 10px;
+    color:#f4f2f2;
+    font-weight: 700;
+    background-color:#D83153 ;
+    box-shadow: var(--shadow-elevation-medium);
+}
+
+
+
+a{
+    color: #d83153;
+    font-weight: bold;
+    text-decoration: none;
+}

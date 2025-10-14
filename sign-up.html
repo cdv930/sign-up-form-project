@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<div id="main-container">
+
+
+    <div id="image-sidebar">
+        <div id="sidebar-container">
+            <img id=hotwheel src="images/porsche.jpg" alt="red porsche diecast model car">
+            <div id="overlay-container">
+                <img id="odin-logo" src="images/odin-lined.png" alt="odin project logo">
+                <div id="overlay-text">Miniature Motors</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="main-content-container">
+        <div class="large-container" id="heading">
+            <p id="heading-text">
+                This is not a real online service! You know you need something <br>
+                 like this sweet model car in your life 
+                  to realize your deepest dreams.<br>
+                  Sign up <em>now</em> to meet our team.
+                  <br><br>
+                You <em>know</em> you want to.
+            </p>
+        </div>
+
+        <div class="medium-container">
+            <h3>Let's do this!</h3>
+            <form action="" method="post" id="signupform">
+                    <div id="row1">
+                    <div class="form-input">
+                    <label for="first_name">FIRST NAME</label>
+                    <input type="text" name="first_name"id="first_name"required>
+                    </div>
+                    <div class="form-input">
+                    <label for="last_name">LAST NAME</label>
+                    <input type="text" name="last_name" id="last_name"required>
+                    </div>
+                    </div>
+                    <div id="row2">
+                    <div class="form-input">
+                    <label for="email">EMAIL</label>
+                    <input type="email"name="email"id="email"required>
+                    </div>
+                    <div class="form-input">
+                    <label for="phone_num">PHONE NUMBER</label>
+                    <input type="text" name="phone_num" id="phone_num"
+                    pattern="([0-9]{10})">
+                    </div>
+                    </div>
+                    <div id="row3">
+                    <div class="form-input">
+                    <label for="password">PASSWORD</label>
+                    <input type="password"name="password"id="password"required>
+                    </div>
+                    <div class="form-input"> 
+                    <label for="confirm_password">CONFIRM PASSWORD</label>
+                    <input type="password" name="confirm_password" id="confirm_password"required>
+                    </div>
+                    </div>
+                <button type="submit" id="create">Create Account</button>
+
+            </form>
+        </div>
+        
+
+        <div class="large-container" id="login">
+            <button type="submit" id="create">Create Account</button>
+            <span>Already have an account? <a>Log in</a></span>
+        </div>
+    </div>
+</div>
