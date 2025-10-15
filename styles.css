@@ -158,6 +158,7 @@ height: auto;
 #login{
     display:flex;
     flex-direction: column;
+    position:relative;
     flex-grow: 1;
     padding-top: 40px;
     padding-left: 40px;
@@ -165,13 +166,15 @@ height: auto;
 }
 
 #form-container{
-    border: 2px solid red;
     flex-grow: 1;
     box-shadow: var(--shadow-elevation-medium);
     z-index: 1;
 }
 
 #signupform{
+    margin-top:40px;
+    position:relative;
+    gap:10px;
     display: flex;
     flex-direction: column;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -181,9 +184,10 @@ height: auto;
 label{
     font-size: smaller;
 }
-input {
-    appearance:none;
-    border:1px solid #bdbdbd;
+
+input:focus{
+    box-shadow:5px 5px 10px #303030 ;
+    border: 2px solid blue;
 }
 #row1,#row2,#row3{
     padding-top: 20px;
@@ -194,14 +198,13 @@ input {
     display:flex;
     flex-direction: column;;
 }
+
 #form-left-col{
     display:flex;
-    border:2px solid pink;
     flex-direction:column;
 }
  
 #form-right-col{
-    border:2px solid pink;
     display: flex;
     flex-direction: column;
 }
@@ -214,10 +217,17 @@ input {
     box-shadow: var(--shadow-elevation-medium);
 }
 
-
-
 a{
     color: #d83153;
     font-weight: bold;
     text-decoration: none;
+}
+
+
+#password:invalid,#confirm_password:invalid{
+    border: 2px red solid;}
+
+#password:valid,
+#confirm_password:valid {
+    border:2px solid blue;
 }
